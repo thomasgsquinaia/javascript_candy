@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vistoria de Nacionalidade</title>
+
+
+</head>
+<body>
+    <h1>Analisando Nacionalidade</h1>
+    De que país você é: 
+    <input type="text" name="txtan" id="txtan">
+    <input type="button" value="verificar" onclick= "verificar()">
+    <div id='res'>
+
+    </div>
+
+        <script>
+            function verificar() {
+                var txt= window.document.getElementById('txtan')
+                var res = window.document.querySelector('div#res')
+                var pais = (txtan.value)
+                res.innerHTML = `<p>Seu país de origem é ${pais}</p>` 
+                if (pais == 'Brasil') {
+                    res.innerHTML+='Você é <strong>Brasileiro</strong>'
+
+                }
+                else {
+                    res.innerHTML+= 'Você é <strong>Estrangeiro</strong>'
+                }
+
+            }
+        </script>
+
+</body>
+</html>

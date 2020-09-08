@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Financeiro</title>
+
+    <style>
+            body{
+                background-color: rgb(171, 219, 82)
+                     }
+
+            input{
+                font: normal 15px Arial;
+                
+                
+            }    
+            div{
+                font-size: 15pt;
+            }    
+            p{
+               font-size: 15pt;
+            } 
+
+    </style>
+   
+    
+</head>
+<body>
+    <h1>Salário</h1>
+    <p>Digite seu salário: </p>
+        
+         <input type="number" name="txtnum" id="txtnum">
+         <input type="button" value="Verificar" onclick="calcular()">
+         <div id="res" >
+             
+         </div>
+
+
+         <script>
+            function calcular() {
+                var txtn= window.document.querySelector('txtnum')
+                var res = window.document.querySelector('div#res')
+                var sal = Number(txtnum.value)
+                var sa= sal+500 
+                res.innerHTML=`Seu salário atual é ${sal}R$ reais !`
+                res.innerHTML= 'Sálarios maiores que 2.500,00 reais não ira receber aumento ! </br> Já inferior a este valor ira ter um acrescimo de 500 reias !'
+                if (sal < 2500) {
+                    res.innerHTML += '</br> Você teve um aumento de 500 reais. '
+            
+                    res.innerHTML+= `</br> Aumentado para ${sa}R$`
+                    
+                } 
+                else {
+                    res.innerHTML += '</br> Você já recebe 2.500,00 reais !'                  
+                }
+            
+            }
+            
+
+         </script>
+
+</body>
+
+
+</html>
